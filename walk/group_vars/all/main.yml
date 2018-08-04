@@ -1,0 +1,8 @@
+#variables
+eos_connection:
+  host: "{{ ansible_host }}"
+  username: admin
+  password: admin
+  transport: eapi
+  validate_certs: No
+  authorize: Yes
