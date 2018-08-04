@@ -1,0 +1,15 @@
+---
+- hosts: arista 
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: Set Hostname
+    eos_config:
+      lines: hostname {{ inventory_hostname }}
+      provider: "{{ eos_connection }}"
+
+  - name: Save Configuration
+    eos_config:
+      lines: write memory
+      provider: "{{ eos_connection }}"
