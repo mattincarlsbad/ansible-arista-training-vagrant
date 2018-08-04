@@ -1,0 +1,10 @@
+---
+- hosts: arista 
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: Gather info from Show Command
+    eos_command:
+      commands: show hostname
+      provider: "{{ eos_connection }}"
