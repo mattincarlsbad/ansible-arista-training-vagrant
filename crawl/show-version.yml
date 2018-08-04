@@ -1,0 +1,13 @@
+---
+- hosts: arista 
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: Gather info from Show Command
+    eos_command:
+      commands: show version
+      username: admin
+      password: admin
+      transport: eapi
+      validate_certs: no
