@@ -1,0 +1,5 @@
+[arista]
+leaf01 ansible_host=10.0.0.1
+leaf02 ansible_host=10.0.0.2
+spine01 ansible_host=10.0.0.3
+spine02 ansible_host=10.0.0.4
